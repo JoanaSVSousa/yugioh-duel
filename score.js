@@ -21,7 +21,7 @@ function updateScore(player, opponent) {
     if (!isGameOver) {
         player.display.textContent = player.score;
         player.score -= parseInt(damage.value);
-        if (player.score === winScore) {
+        if (player.score <= winScore) {
             isGameOver = true;
             player.display.classList.add("has-text-success");
             opponent.display.classList.add("has-text-danger");
