@@ -1,3 +1,5 @@
+reset();
+
 const resetButton = document.querySelector("#reset");
 const playSelector = document.querySelector("#playto");
 
@@ -23,8 +25,8 @@ function updateScore(player, opponent) {
         player.score -= parseInt(damage.value);
         if (player.score <= winScore) {
             isGameOver = true;
-            player.display.classList.add("has-text-success");
-            opponent.display.classList.add("has-text-danger");
+            player.display.classList.add("has-text-danger");
+            opponent.display.classList.add("has-text-success");
             player.button.disabled = true;
             opponent.button.disabled = true;
         }
